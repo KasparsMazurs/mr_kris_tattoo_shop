@@ -24,14 +24,57 @@
 </head>
 <body>
     <header>
-
-
-    </header>
+        <!-- Logo -->
+        <a href="{% url 'home' %}">
+            <div class="logo"></div>
+        </a>
+        <!-- Nav bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Mr Kris Tattoo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact me </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Log In</a></li>
+                            <li><a class="dropdown-item" href="#">Your shopping cart</a></li>
     
-    <!-- Logo/registration -->
+                            <li><a class="dropdown-item" href="#">Welcome</a></li>
+                            <li><a class="dropdown-item" href="#">Your shopping cart</a></li>
+                            <li><a class="dropdown-item" href="#">Your orders</a></li>
+                            <li><a class="dropdown-item" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>  
     <h1> test</h1>
-        
-    <!-- Nav bar -->
 
     <!-- Content -->
     <main>
@@ -47,6 +90,11 @@
 
     <!--My JS script-->
     <script src="{% static 'js/script.js' %}"></script>
+
+    <!--Google Font-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;600&display=swap');
+    </style>
 
     <!-- font awesome scrip -->
     <script src="https://kit.fontawesome.com/83b6b0cfb3.js" crossorigin="anonymous"></script>

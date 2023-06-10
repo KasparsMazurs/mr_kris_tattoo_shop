@@ -1,0 +1,42 @@
+* {
+    font-family: 'Khand', sans-serif;
+}
+
+.logo {
+    background: url(https://lh3.googleusercontent.com/pw/AJFCJaVlmXXvrC4sSGEZEcWnrv8T5Ybzq36PCTVuci1YgwdxHxFKLaTmY2ysGuvIh0V0knjUx3KDzHVtPZXzew-Tu5P4SFm6H8iP27BSKvm4MySN0B7BfnTm7ccKFrY-tsiFKstiWzBCuTa4IbqKkdzKqLaDvw=w3840-h522-s-no?authuser=0);
+    height: 10vh;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right{
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 992px) {
+    .center {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+    .right{
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+ }
+
+
