@@ -138,7 +138,8 @@ footer {
 }
 
 .social-links li a i:hover {
-    background: #847cf3;
+    color: black;
+    background: #7cf38c;
 }
 
 .address{
@@ -170,4 +171,19 @@ footer {
 
 .aboutme h1, p {
     color: white;
+}
+
+/*--------------------Contactme.html */
+
+.fontc-color-w {
+    color: white;
+}
+
+.paddind-top {
+    padding-top: 3vh;
+}
+
+.margin {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
 }
