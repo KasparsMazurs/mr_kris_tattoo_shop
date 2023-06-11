@@ -175,7 +175,7 @@ footer {
 
 /*--------------------Contactme.html */
 
-.fontc-color-w {
+.font-color-w {
     color: white;
 }
 
@@ -186,4 +186,23 @@ footer {
 .margin {
     margin-top: 1vh;
     margin-bottom: 3vh;
+}
+
+/*--------------------------------------allauth */
+
+.box {
+    margin: 2vh;
+}
+
+.link {
+    color: white;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: black;
+}
+
+.margin-s {
+    margin-top: 1vh;
 }
