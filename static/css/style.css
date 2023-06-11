@@ -4,6 +4,10 @@
     font-family: 'Khand', sans-serif;
 }
 
+body {
+    background-color: #525252;
+}
+
 /*------------------------------------------Logo */
 
 .logo {
@@ -16,20 +20,33 @@
 
 /*--------------------------------------Nav bar */
 
+.dropdown-bg {
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
 .nav-logo {
-    color: black;
+    color: #fafafa;;
     font-weight: bold;
 }
 
 .nav-logo:hover {
-    color: black;
+    color: #fafafa;;
 }
 
 .font {
-    color: black;
+    color: #fafafa;;
 }
 
 .font:hover {
+    color: #fafafa;;
+    font-weight: bold;
+}
+
+.dd-font {
+    color: #fafafa;;
+}
+
+.dd-font:hover {
     color: black;
     font-weight: bold;
 } 
@@ -54,12 +71,12 @@
 }
 
 .bag-font {
-    color: black;
+    color: #fafafa;;
     font-size: x-large;
 }
 
 .bag-font:hover  {
-    color: black;
+    color: #fafafa;;
 }
 
 /*--------------------Adjust Nav bar to smaller screens */
@@ -86,7 +103,6 @@
 /*--------------------------------------------Footer*/
 
 footer {
-    background-color: #525252;
     color: #fafafa;
     min-height: 120px;
     margin: 0;
@@ -94,6 +110,7 @@ footer {
 
 .margin-top {
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .social-links {
@@ -127,4 +144,30 @@ footer {
 .address{
     margin: 0;
     padding: 0;
+}
+
+/*--------------------------------------index.html */
+
+.bg-image {
+    background: url(https://lh3.googleusercontent.com/pw/AJFCJaW80i3cV1myoB1g62Ugw6HMhJNYXlT3EYZrboF6FRHulE1LIjfsGx7rjX0KxNX1wvVDNKWyYME2p-XJ7b4waYOJ7xg_sUW9wM4dWj-oarYJgLNmWsw2xuD3oKhstKPrAVJW6jdAbDXAGrDrByo0BhVWLQ=w1329-h1860-s-no?authuser=0);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-image{
+    background: url(https://lh3.googleusercontent.com/pw/AJFCJaXlOr_zvvUZ2OJ-a8LHXaeoeyvkkc9_g3a6POz3mGCCC9DEWpM26utTluAZUgYiacq2t6Zvjp_YHjSemv0JsOFZPPvaAbGc3WrnPIPQFfKnH73x2YGCFrHD1B836kZpLlR637cg0kDXzITaFnTHxEpFzg=w1395-h1860-s-no?authuser=0);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.aboutme {
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.aboutme h1, p {
+    color: white;
 }
