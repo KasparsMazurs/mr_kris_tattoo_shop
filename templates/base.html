@@ -31,7 +31,7 @@
         <!-- Nav bar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Mr Kris Tattoo</a>
+              <a class="navbar-brand nav-logo" href="{% url 'home' %}">Mr Kris Tattoo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
               </button>
@@ -39,33 +39,33 @@
                 <div class="center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link font" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
+                            <a class="nav-link font" href="#">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link font" href="#">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact me </a>
+                            <a class="nav-link font" href="#">Contact me </a>
                         </li>
                     </ul>
                 </div>
                 <div class="right">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle bag-font" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Log In</a></li>
-                            <li><a class="dropdown-item" href="#">Your shopping cart</a></li>
+                            <ul class="dropdown-menu dropdown-bag">
+                            <li><a class="dropdown-item font" href="#">Log In</a></li>
+                            <li><a class="dropdown-item font" href="#">Your shopping cart</a></li>
     
-                            <li><a class="dropdown-item" href="#">Welcome</a></li>
-                            <li><a class="dropdown-item" href="#">Your shopping cart</a></li>
-                            <li><a class="dropdown-item" href="#">Your orders</a></li>
-                            <li><a class="dropdown-item" href="#">Log out</a></li>
+                            <li><a class="dropdown-item font" href="#">Welcome</a></li>
+                            <li><a class="dropdown-item font" href="#">Your shopping cart</a></li>
+                            <li><a class="dropdown-item font" href="#">Your orders</a></li>
+                            <li><a class="dropdown-item font" href="#">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -73,8 +73,7 @@
               </div>
             </div>
           </nav>
-    </header>  
-    <h1> test</h1>
+    </header> 
 
     <!-- Content -->
     <main>
@@ -84,8 +83,42 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 uppercase margin-top">
+                <h4>© 2023 All copyrights are reserved to Mr., Kris Tattoo.</h4>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-center">find me on social media:</h4>
+                <ul class="list-inline social-links text-center">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/kristaps.mazurs" target="_blank" rel="noopener" aria-label="Visit my Facebook page (open in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+                        <span class="sr-only">Facebook</span>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/mr_kris_tattoo/" target="_blank" rel="noopener" aria-label="Visit my Instagram page (open in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+                        <span class="sr-only">Instagram</span>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.tiktok.com/@kristapsmazurs" target="_blank" rel="noopener" aria-label="Visit my TikTok page (open in a new tab)"><i class="fa-brands fa-tiktok"></i></a>
+                        <span class="sr-only">TikTok</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4 class="text-center">Address:</h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <p class="address">24 St Laurence St</p>
+                        <p class="address">Co. Louth</p>
+                        <p class="address">Drogheda</p>
+                    </div>
+                    <div class="col-md-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.5926522809564!2d-6.348682301138873!3d53.71542629828834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48673a215162cddb%3A0xe7dee102e1d634c1!2s24%20St%20Laurence%20St%2C%20Lagavooren%2C%20Drogheda%2C%20Co.%20Louth%2C%20A92%20P2KV!5e0!3m2!1sen!2sie!4v1686475715476!5m2!1sen!2sie" width="100%" height="100vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!--My JS script-->
