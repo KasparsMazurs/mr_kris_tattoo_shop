@@ -33,7 +33,12 @@
       
       <form class="login text-center" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-group">
+          {{ form.login }}
+        </div>
+        <div class="form-group">
+          {{ form.password }}
+        </div>
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}

@@ -5,17 +5,45 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<div class="box bg-image">
+  <div class="container-fluid aboutme border text-center">
+    <h1 class="margin-s">{% trans "Sign Up" %}</h1>
+    <p>{% blocktrans %}Already have an account? Then please <a class="link" href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="margin btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </form>
+  </div>
+</div>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  <div class="form-group">
+    <label for="{{ form.email.id_for_label }}" class="label">{{ form.email.label }}</label>
+    {{ form.email }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.emailaddressconfirmation.id_for_label }}" class="label">{{ form.email.label }}</label>
+    {{ form.emailaddressconfirmation }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.username.id_for_label }}" class="label">{{ form.username.label }}</label>
+    {{ form.username }}
+  </div>
+  <!-- Add more form fields as needed -->
+  
   {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  
+  <button class="margin btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
 
 {% endblock %}
+
