@@ -195,7 +195,8 @@ footer {
 }
 
 .link {
-    color: white;
+    color: bisque;
+    font-size: larger;
     font-weight: bold;
 }
 
@@ -209,4 +210,11 @@ footer {
 
 .form-group {
     margin-top: 1vh;
+}
+
+.label {
+    color: white;
+    margin-bottom: 0;
+    margin-top: 1vh;
+    font-weight: bold;
 }
