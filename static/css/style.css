@@ -218,3 +218,17 @@ footer {
     margin-top: 1vh;
     font-weight: bold;
 }
+
+/*--------------------404.html */
+
+.image_404 {
+    background: url(https://cdn.pixabay.com/animation/2022/12/05/05/08/05-08-32-681_512.gif);
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.bg {
+    background-color: white;
+}
