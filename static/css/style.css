@@ -5,7 +5,22 @@
 }
 
 body {
-    background-color: #525252;
+    background: url(https://lh3.googleusercontent.com/pw/AJFCJaW80i3cV1myoB1g62Ugw6HMhJNYXlT3EYZrboF6FRHulE1LIjfsGx7rjX0KxNX1wvVDNKWyYME2p-XJ7b4waYOJ7xg_sUW9wM4dWj-oarYJgLNmWsw2xuD3oKhstKPrAVJW6jdAbDXAGrDrByo0BhVWLQ=w1329-h1860-s-no?authuser=0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.transparent-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.margin-all {
+    margin: 3vh;
+}
+
+.padding-all {
+    padding: 3vh;
 }
 
 /*------------------------------------------Logo */
@@ -19,10 +34,6 @@ body {
 }
 
 /*--------------------------------------Nav bar */
-
-.dropdown-bg {
-    background-color: rgba(0, 0, 0, 0.329);
-}
 
 .nav-logo {
     color: #fafafa;;
@@ -103,9 +114,11 @@ body {
 /*--------------------------------------------Footer*/
 
 footer {
+    padding-top: 2vh;
     color: #fafafa;
-    min-height: 120px;
+    min-height: 15vh;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .margin-top {
@@ -149,31 +162,35 @@ footer {
 
 /*--------------------------------------index.html */
 
-.bg-image {
-    background: url(https://lh3.googleusercontent.com/pw/AJFCJaW80i3cV1myoB1g62Ugw6HMhJNYXlT3EYZrboF6FRHulE1LIjfsGx7rjX0KxNX1wvVDNKWyYME2p-XJ7b4waYOJ7xg_sUW9wM4dWj-oarYJgLNmWsw2xuD3oKhstKPrAVJW6jdAbDXAGrDrByo0BhVWLQ=w1329-h1860-s-no?authuser=0);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .title-image{
-    background: url(https://lh3.googleusercontent.com/pw/AJFCJaXlOr_zvvUZ2OJ-a8LHXaeoeyvkkc9_g3a6POz3mGCCC9DEWpM26utTluAZUgYiacq2t6Zvjp_YHjSemv0JsOFZPPvaAbGc3WrnPIPQFfKnH73x2YGCFrHD1B836kZpLlR637cg0kDXzITaFnTHxEpFzg=w1395-h1860-s-no?authuser=0);
     height: 100vh;
+    background: url(https://lh3.googleusercontent.com/pw/AJFCJaXlOr_zvvUZ2OJ-a8LHXaeoeyvkkc9_g3a6POz3mGCCC9DEWpM26utTluAZUgYiacq2t6Zvjp_YHjSemv0JsOFZPPvaAbGc3WrnPIPQFfKnH73x2YGCFrHD1B836kZpLlR637cg0kDXzITaFnTHxEpFzg=w1395-h1860-s-no?authuser=0);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .aboutme {
-    background-color: rgba(0, 0, 0, 0.329);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .aboutme h1, p {
     color: white;
 }
 
+.padding-bottom {
+    padding-bottom: 5vh;
+}
+
+.padding-top {
+    padding-top: 3vh;
+}
+
 /*--------------------Contactme.html */
+
+.min-view {
+    min-height: 70vh;
+}
 
 .font-color-w {
     color: white;
@@ -184,7 +201,7 @@ footer {
 }
 
 .margin {
-    margin-top: 1vh;
+    margin-top: 3vh;
     margin-bottom: 3vh;
 }
 
