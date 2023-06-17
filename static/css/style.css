@@ -249,3 +249,18 @@ footer {
 .bg {
     background-color: white;
 }
+
+/*--------------------gallery.html */
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    margin: 2px;
+}
+
+.card {
+    height: 20vh;
+    overflow: hidden;
+    background-color: transparent;
+    border:none;
+}
