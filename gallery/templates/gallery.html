@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 <!-- Gallery list -->
 <section class="transparent-bg margin-all padding-all font-color-w">
     <h1 class="text-center">My Tattoo Gallery</h1>
@@ -10,12 +9,17 @@
     {% for gallery_image in gallery_images %}
         <div class="col-xl-2 col-lg-3 col-md-4 margin-s card">
             <div class="image">
-                <img src="{{ gallery_image.image.url }}" alt="{{ gallery_image.description }}">
+                <a href="{{ gallery_image.image.url }}" data-lightbox="gallery">
+                    <img src="{{ gallery_image.image.url }}" alt="{{ gallery_image.description }}">
+                </a>
             </div>
         </div>
     {% endfor %}
     </div>
 </section>
 
+<script>
+    lightbox.init();
+</script>
 {% endblock %}
 
