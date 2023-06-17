@@ -18,6 +18,3 @@
             }
         });
     }
-
-    // run lightbox for gallery
-    lightbox.init();
