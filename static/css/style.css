@@ -259,8 +259,26 @@ footer {
 }
 
 .card {
-    height: 20vh;
+    max-height: 20vh;
     overflow: hidden;
     background-color: transparent;
     border:none;
 }
+
+.overflow-container {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*--------------------Adjust images to smaller screens */
+
+@media screen and (max-width: 992px) {
+    .card {
+        max-height: 25vh;
+    }
+ }
+
+ @media screen and (max-width: 760px) {
+    .card {
+        max-height: 50vh;
+    }
+ }
