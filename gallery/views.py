@@ -13,4 +13,9 @@ class GalleryListView(ListView):
     context_object_name = 'gallery_images'
 
     def get_queryset(self):
-        return super().get_queryset()
+        queryset = super().get_queryset()
+        body_part_filter = self.request.GET.get('body_part', 'all')
+        if body_part_filter == 'all':
+            return queryset
+        else:
+            return queryset.filter(body_part=body_part_filter)

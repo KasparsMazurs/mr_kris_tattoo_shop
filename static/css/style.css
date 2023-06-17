@@ -265,8 +265,18 @@ footer {
     border:none;
 }
 
-.overflow-container {
-    background-color: rgba(0, 0, 0, 0.4);
+.filter-button {
+    margin: 5px;
+    width: 4vh;
+    background-color: #8f8f8f;;
+    color: white;
+    border-radius: 25%;
+}
+
+.filter-button:hover {
+    color: black;
+    font-weight: bold;
+    background-color: #7cf38c;
 }
 
 /*--------------------Adjust images to smaller screens */

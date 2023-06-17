@@ -5,21 +5,29 @@
 <!-- Gallery list -->
 <section class="transparent-bg margin-all padding-all font-color-w">
     <h1 class="text-center">My Tattoo Gallery</h1>
-    <div class="row">
-    {% for gallery_image in gallery_images %}
-        <div class="col-xl-2 col-lg-3 col-md-4 margin-s card">
-            <div class="image">
-                <a href="{{ gallery_image.image.url }}" data-lightbox="gallery">
-                    <img src="{{ gallery_image.image.url }}" alt="{{ gallery_image.description }}">
-                </a>
-            </div>
+    <div class="row text-center">
+        <div class="filter-buttons">
+            <button class="filter-button" data-filter="all">All</button>
+            <button class="filter-button" data-filter="Leg">Leg</button>
+            <button class="filter-button" data-filter="Arm">Arm</button>
+            <button class="filter-button" data-filter="Neck">Neck</button>
+            <button class="filter-button" data-filter="Torso">Torso</button>
+            <button class="filter-button" data-filter="Back">Back</button>
+            <button class="filter-button" data-filter="Palm">Palm</button>
         </div>
-    {% endfor %}
+    </div>
+    <div class="row">
+        {% for gallery_image in gallery_images %}
+            <div class="col-xl-2 col-lg-3 col-md-4 margin-s card" data-category="{{ gallery_image.body_part }}">
+                <div class="image">
+                    <a href="{{ gallery_image.image.url }}" data-lightbox="gallery">
+                        <img src="{{ gallery_image.image.url }}" alt="{{ gallery_image.description }}">
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </section>
 
-<script>
-    lightbox.init();
-</script>
 {% endblock %}
 
