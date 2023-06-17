@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+import datetime
 
 class Gallery(models.Model):
     """
@@ -18,6 +17,7 @@ class Gallery(models.Model):
         ('Palm', 'Palm'),
     ]
     body_part = models.CharField(max_length=20, choices=body_parts)
+    created_on = models.DateTimeField(default=datetime.datetime.now)
 
     def __str__(self):
         return self.description

@@ -16,6 +16,6 @@ class GalleryListView(ListView):
         queryset = super().get_queryset()
         body_part_filter = self.request.GET.get('body_part', 'all')
         if body_part_filter == 'all':
-            return queryset
+            return queryset.order_by('-created_on')  # Newest images first
         else:
-            return queryset.filter(body_part=body_part_filter)
+            return queryset.filter(body_part=body_part_filter).order_by('-created_on')
