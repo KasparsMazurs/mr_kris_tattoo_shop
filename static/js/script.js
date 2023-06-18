@@ -6,7 +6,7 @@
         });
     });
 
-    // Filter gallery based on the selected category
+    // Filter gallery based on the body part
     function filterGallery(category) {
         var galleryItems = document.querySelectorAll('.card');
         galleryItems.forEach(function(item) {
@@ -18,3 +18,19 @@
             }
         });
     }
+
+    // Filter products based on art type
+    function filterProducts() {
+        const filterType = document.getElementById('filter-select').value;
+        const url = new URL(window.location);
+        const params = new URLSearchParams(url.search);
+        
+        if (filterType) {
+            params.set('filter', filterType);
+        } else {
+            params.delete('filter');
+        }
+        
+        window.location.href = url.pathname + '?' + params.toString();
+    }
+

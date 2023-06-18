@@ -2,6 +2,16 @@ from django.db import models
 
 # Create your models here.
 
+class Comment(models.Model):
+    """
+    Create a model for comments
+    """
+    post = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='product_comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
 class Product(models.Model):
     """
     Create a model for products
@@ -19,17 +29,7 @@ class Product(models.Model):
         ('Painting', 'Painting'),
     ]
     product_type = models.CharField(max_length=40, choices=types, default='Black and white drawing')
+    comments = models.ManyToManyField(Comment, related_name='product')
 
     def __str__(self):
         return self.name
-
-class Comment(models.Model):
-    """
-    Create a model for comments
-    """
-    post = models.ForeignKey(Product, on_delete=models.CASCADE,
-                             related_name="comments")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
