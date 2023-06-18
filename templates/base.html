@@ -59,9 +59,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="right">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
+                <div >
+                    <ul class="navbar-nav line">
+                        <li class="nav-item line right">
+                            <a class="nav-link font line" href="#">0.00 Eur</a>
+                        </li>
+                        <li class="nav-item dropdown line right-f">
                             <a class="nav-link dropdown-toggle bag-font" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
@@ -69,7 +72,7 @@
                             {% if user.is_authenticated %}
                             <li><a class="dropdown-item dd-font" href="#">Welcome, {{ request.user.username }}!</a></li>
                             <li><a class="dropdown-item dd-font" href="#">Your shopping cart</a></li>
-                            <li><a class="dropdown-item dd-font" href="#">Your orders</a></li>
+                            <li><a class="dropdown-item dd-font" href="#">Your order</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>
                             {% else %}
                             <li><a class="dropdown-item dd-font" href="{% url 'account_login' %}">Log In</a></li>

@@ -72,6 +72,13 @@ body {
 .right {
     position: absolute;
     top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+}
+
+.right-f {
+    position: absolute;
+    top: 50%;
     left: 97%;
     transform: translate(-50%, -50%);
 }
@@ -90,6 +97,10 @@ body {
     color: #fafafa;;
 }
 
+.line {
+    display: inline-block;
+}
+
 /*--------------------Adjust Nav bar to smaller screens */
 
 @media screen and (max-width: 992px) {
@@ -105,9 +116,18 @@ body {
         left: auto;
         transform: none;
     }
+    .right-f {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
     .dropdown-bag {
         position: static;
         transform: none;;
+    }
+    .line {
+        display: unset;
     }
  }
 
