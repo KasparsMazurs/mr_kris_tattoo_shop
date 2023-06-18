@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'storages',
     'contactme',
     'gallery',
+    'shop',
 ]
 
 MIDDLEWARE = [

@@ -26,6 +26,7 @@ urlpatterns = [
     path('gallery/', include('gallery.urls')),
     path('summernote/', include('django_summernote.urls')),
     path('lightbox/', include('lightbox.urls')),
+    path('shop/', include('shop.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'home.views.handling_404'
