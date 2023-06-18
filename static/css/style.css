@@ -311,3 +311,23 @@ footer {
         max-height: 50vh;
     }
  }
+
+/*--------------------shop.html */
+
+.bold {
+    font-weight: bold;
+}
+
+.max-high {
+    height: 40vh;
+}
+
+.bottom-element {
+    display: flex;
+    align-items: center;
+}
+
+.btn-margin {
+    margin-bottom: 1vh;
+    margin-left: 3vh;
+}

@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='product',
             name='digital_copy_price',
-            field=models.DecimalField(decimal_places=2, default='', max_digits=6),
+            field=models.DecimalField(decimal_places=2, default='0', max_digits=6),
         ),
         migrations.AddField(
             model_name='product',

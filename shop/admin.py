@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(SummernoteModelAdmin):
     """
     Create an admin panel for Products
     """
@@ -14,6 +14,6 @@ class ProductAdmin(admin.ModelAdmin):
     summernote_fields = ('description',)
     fieldsets = (
         (None, {
-            'fields': ('image', 'name','slug', 'description')
+            'fields': ('image', 'name','slug', 'description', 'product_price', 'digital_product_price', 'product_type', )
         }),
     )

@@ -7,18 +7,21 @@
     <h1 class="text-center">Mr. Kris Shop</h1>
     <div class="row">
         {% for shop_product in shop_products %}
-            <div class="col-xl-2 col-lg-3 col-md-4 margin-s card">
-                <div>
-                    <a href="#">
+            <div class="col-xl-2 col-lg-3 col-md-4 box border">
+                <h4 class="text-center margin-s bold">{{ shop_product.name }}</h4>
+                <div class="card max-high">
+                    <div class="image">
                         <img src="{{ shop_product.image.url }}" alt="{{ shop_product.name.url }}">
-                        <p>{{ shop_product.price.url }}</p>
-                        <p>{{ shop_product.name.url }}</p>
-                        <p>{{ shop_product.description.url }}</p>
-                    </a>
+                    </div>   
                 </div>
+                <div class="margin-s bottom-element">
+                    <p class="bold">{{ shop_product.product_price }} Eur</p>
+                    <button type="button" class="btn btn-success btn-margin">Add to the cart</button>
+                </div>  
             </div>
         {% endfor %}
     </div>
 </section>
 
 {% endblock %}
+

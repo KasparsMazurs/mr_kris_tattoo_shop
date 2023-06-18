@@ -9,6 +9,8 @@ class Product(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
+    product_price = models.DecimalField(max_digits=6, decimal_places=2)
+    digital_product_price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     types = [
