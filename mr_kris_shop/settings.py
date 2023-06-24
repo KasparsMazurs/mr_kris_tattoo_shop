@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'contactme',
     'gallery',
     'shop',
+    'bag',
 ]
 
 MIDDLEWARE = [

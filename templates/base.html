@@ -62,7 +62,7 @@
                 <div >
                     <ul class="navbar-nav line">
                         <li class="nav-item line right">
-                            <a class="nav-link font line" href="#">0.00 Eur</a>
+                            <a class="nav-link font line" href="{% url 'bag' %}">0.00 Eur</a>
                         </li>
                         <li class="nav-item dropdown line right-f">
                             <a class="nav-link dropdown-toggle bag-font" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,12 +71,11 @@
                             <ul class="dropdown-menu dropdown-bag transparent-bg">
                             {% if user.is_authenticated %}
                             <li><a class="dropdown-item dd-font" href="#">Welcome, {{ request.user.username }}!</a></li>
-                            <li><a class="dropdown-item dd-font" href="#">Your shopping cart</a></li>
-                            <li><a class="dropdown-item dd-font" href="#">Your order</a></li>
+                            <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>
                             {% else %}
                             <li><a class="dropdown-item dd-font" href="{% url 'account_login' %}">Log In</a></li>
-                            <li><a class="dropdown-item dd-font" href="#">Your shopping cart</a></li>
+                            <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li>
                             {% endif %}
                             </ul>
                         </li>
