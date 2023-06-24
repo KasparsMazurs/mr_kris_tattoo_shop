@@ -216,10 +216,6 @@ footer {
     color: white;
 }
 
-.paddind-top {
-    padding-top: 3vh;
-}
-
 .margin {
     margin-top: 3vh;
     margin-bottom: 3vh;
@@ -330,4 +326,14 @@ footer {
 .btn-margin {
     margin-bottom: 1vh;
     margin-left: 3vh;
+}
+
+.margin-left {
+    margin-left: 2vh;
+}
+
+/*--------------------bag.html */
+
+.box-s {
+    margin: 1vh;
 }

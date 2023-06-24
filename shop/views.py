@@ -31,18 +31,3 @@ class ProductDetailView(DetailView):
     model = Product
     template_name = 'product_detail.html'
     context_object_name = 'product'
-
-    def add_comment(request, slug):
-        product = get_object_or_404(Product, slug=slug)
-
-        if request.method == 'POST':
-            form = CommentForm(request.POST)
-            if form.is_valid():
-                comment = form.save(commit=False)
-                comment.post = product
-                comment.save()
-                return redirect('product-detail', slug=slug)
-        else:
-            form = CommentForm()
-
-        return render(request, 'product_detail.html')

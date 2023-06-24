@@ -1,8 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block content %}
-<!-- bag views -->
-<h1>Works</h1>
+{% block page_header %}
+{% endblock %}
 
+{% block content %}
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col text-center transparent-bg border margin-s">
+                <h2 class="font-color-w margin-s">Shopping Bag</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col transparent-bg border margin-s">
+                {% if bag_items %}
+                    <div class="box">
+                        {% for item in bag_items %}
+                        <div class="container transparent-bg border row margin-s">
+                            <div class="card col-5 box-s">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </div>
+                            <div class="col-6 box-s">
+                                <h4 class="font-color-w"><strong>{{ item.product.name }}</strong></h4>
+                                <p><strong>Eur: {{ item.product.product_price }}</strong></p>
+                                <p>Quantity: {{ item.quantity }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <h3 class="text-center font-color-w margin-s">Your bag is empty.</h3>
+                    <a href="{% url 'shop' %}" class="btn btn-light box">
+                        <span>
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span>Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        
+    </div>
 {% endblock %}
