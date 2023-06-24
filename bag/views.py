@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponseNotAllowed, JsonResponse
+from django.shortcuts import render, redirect, HttpResponse
+from django.views.decorators.http import require_POST
+from django.http import JsonResponse
 
 # Create your views here.
 def bag(request):
@@ -21,3 +22,13 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+@require_POST
+def delete_from_bag(request, item_id):
+    # Retrieve the product item from the shopping bag and set the quantity to 0
+    bag = request.session.get('bag', {})
+    bag[item_id] = 0
+    request.session['bag'] = bag
+
+    # Return a JSON response to indicate the successful deletion
+    return JsonResponse({'message': 'Product deleted from cart'})

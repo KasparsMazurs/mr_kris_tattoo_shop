@@ -24,7 +24,7 @@
                                 <h4 class="font-color-w"><strong>{{ item.product.name }}</strong></h4>
                                 <p><strong>Eur: {{ item.product.product_price }}</strong></p>
                                 <p>Quantity: {{ item.quantity }}</p>
-                                <button type="button" class="btn btn-danger" onclick="deleteProduct('{{ item.id }}')">Delete product from cart</button>
+                                <button type="button" class="btn btn-danger" onclick="deleteProduct('{{ item.item_id }}')">Delete product from cart</button>
                             </div>
                         </div>
                         {% endfor %}
@@ -49,8 +49,6 @@
                     </a>
                 {% endif %}
             </div>
-        </div>
-
-        
+        </div>     
     </div>
 {% endblock %}
