@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseNotAllowed, JsonResponse
 
 # Create your views here.
 def bag(request):
@@ -9,7 +10,7 @@ def bag(request):
 def add_to_bag(request, item_id):
     """ Add a specified product to the shopping bag """
 
-    quantity = int(1)
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 

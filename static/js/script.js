@@ -33,4 +33,3 @@
         
         window.location.href = url.pathname + '?' + params.toString();
     }
-

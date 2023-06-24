@@ -337,3 +337,7 @@ footer {
 .box-s {
     margin: 1vh;
 }
+
+.max-w {
+    max-width: 40vh;
+}
