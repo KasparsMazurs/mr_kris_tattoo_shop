@@ -1,7 +1,6 @@
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header green">
-        <img src="..." class="rounded me-2" alt="...">
-        <strong class="me-auto">Success</strong>
+        <strong class="me-auto font-color-b">Success</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
@@ -24,6 +23,10 @@
             </div>
             <div class="row">
                 <div class="col">
+                    <strong><p class="mt-3 mb-1 font-color-b">
+                        Total: 
+                        <span>{{ total|floatformat:2 }} Eur</span>
+                    </p></strong>
                     <a href="{% url 'bag' %}" class=" btn btn-success">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span>
