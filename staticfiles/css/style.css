@@ -311,3 +311,9 @@ footer {
         max-height: 50vh;
     }
  }
+
+/*--------------------product_details.html */
+
+.max-w {
+    max-width: 20px;
+}

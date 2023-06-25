@@ -19,7 +19,28 @@
                 <div class="form-row">
                     <div class="col-12 box">
                         <p class="font-color-w"><strong>Quantity:</strong></p>
-                        <input class="max-w" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                        <div class="input-group max-w">
+                            <div class="input-group-prepend">
+                                <button class="decrement-qty btn btn-black" 
+                                    data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                    <span class="font-color-w">
+                                        <i class="fas fa-minus"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <input class="form-control qty_input" type="number"
+                                name="quantity" value="1" min="1" max="99"
+                                data-item_id="{{ product.id }}"
+                                id="id_qty_{{ product.id }}">
+                            <div class="input-group-append">
+                                <button class="increment-qty btn btn-black"
+                                    data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                    <span class="font-color-w">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <a href="{% url 'shop' %}" class="btn btn-light">
@@ -36,4 +57,58 @@
         </div>
     </div>
 </section>
+
+<script>
+// Disable +/- buttons outside 1-99 range
+function handleEnableDisable(itemId) {
+    var currentValue = parseInt(document.getElementById(`id_qty_${itemId}`).value);
+    var minusDisabled = currentValue < 2;
+    var plusDisabled = currentValue > 98;
+    document.getElementById(`decrement-qty_${itemId}`).disabled = minusDisabled;
+    document.getElementById(`increment-qty_${itemId}`).disabled = plusDisabled;
+}
+  
+// Ensure proper enabling/disabling of all inputs on page load
+var allQtyInputs = document.getElementsByClassName('qty_input');
+for (var i = 0; i < allQtyInputs.length; i++) {
+    var itemId = allQtyInputs[i].dataset.item_id;
+    handleEnableDisable(itemId);
+}
+  
+  // Check enable/disable every time the input is changed
+var qtyInputs = document.getElementsByClassName('qty_input');
+for (var i = 0; i < qtyInputs.length; i++) {
+    qtyInputs[i].addEventListener('change', function() {
+        var itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+}
+  
+// Increment quantity
+var incrementBtns = document.getElementsByClassName('increment-qty');
+for (var i = 0; i < incrementBtns.length; i++) {
+    incrementBtns[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        var closestInput = this.closest('.input-group').querySelector('.qty_input');
+        var currentValue = parseInt(closestInput.value);
+        closestInput.value = currentValue + 1;
+        var itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+  }
+  
+// Decrement quantity
+var decrementBtns = document.getElementsByClassName('decrement-qty');
+for (var i = 0; i < decrementBtns.length; i++) {
+    decrementBtns[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        var closestInput = this.closest('.input-group').querySelector('.qty_input');
+        var currentValue = parseInt(closestInput.value);
+        closestInput.value = currentValue - 1;
+        var itemId = this.dataset.item_id;
+        handleEnableDisable(itemId);
+    });
+}
+
+</script>
 {% endblock %}
