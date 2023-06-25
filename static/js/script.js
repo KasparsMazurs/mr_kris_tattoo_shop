@@ -34,22 +34,11 @@
         window.location.href = url.pathname + '?' + params.toString();
     }
 
-    // delite product from cart
-    function deleteProduct(item_id) {
-        // Send an AJAX request to update the quantity to 0 for the specified product item
-        // You can use the item_id to identify the product in the backend and update the quantity
-    
-        // Example AJAX request using jQuery
-        $.ajax({
-            url: '/delete/' + item_id + '/',  // URL to your delete view
-            type: 'POST',
-            data: { quantity: 0 },  // Set the quantity to 0
-            success: function(response) {
-                // Handle the response if needed, e.g., remove the deleted product item from the DOM
-                // Example: $('#item_' + item_id).remove();
-            },
-            error: function(xhr, errmsg, err) {
-                // Handle the error if needed
-            }
+    // Script for toasts
+    document.addEventListener('DOMContentLoaded', function() {
+        var toastElements = document.querySelectorAll('.toast');
+        toastElements.forEach(function(toastElement) {
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
         });
-    }
+    });

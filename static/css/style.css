@@ -341,3 +341,36 @@ footer {
 .max-w {
     max-width: 40vh;
 }
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: mediumseagreen;
+}
+
+.coral {
+    background-color:coral;
+}
+
+.font-color-b {
+    color: black;
+}

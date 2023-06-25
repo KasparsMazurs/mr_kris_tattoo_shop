@@ -1,0 +1,39 @@
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header green">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Success</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        {{ message }} 
+
+        {% if grand_total %}
+            <p class="font-color-b">In your Bag are {{ product_count }} itams!</p>
+            <div>
+                {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img class="w-100" src="{{ item.product.image.url }}">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0 font-color-b"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="{% url 'bag' %}" class=" btn btn-success">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span>
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+
+
+    </div>
+</div>
