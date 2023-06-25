@@ -377,3 +377,19 @@ footer {
 
 /* ------------------------------- CheckOut page */
 
+.line-w {
+    padding-top: 1vh;
+    position: relative;
+    width: 100%;
+    height: 1px;
+  }
+  
+  .line-w::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
