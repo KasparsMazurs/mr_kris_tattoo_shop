@@ -6,9 +6,9 @@
     https://stripe.com/docs/stripe-js
 */
 
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe(stripePublicKey);
+var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
+var client_secret = $('#id_client_secret').text().slice(1, -1);
+var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 var style = {
     base: {
@@ -21,7 +21,7 @@ var style = {
         }
     },
     invalid: {
-        color: '#dc3545',
+        color: '#fa755a',
         iconColor: '#dc3545'
     }
 };
@@ -33,10 +33,12 @@ card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
         var html = `
+        <div class="text-danger-bg">
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
             </span>
             <span>${event.error.message}</span>
+        </div>
         `;
         $(errorDiv).html(html);
     } else {
