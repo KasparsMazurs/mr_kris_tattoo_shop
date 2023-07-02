@@ -70,6 +70,10 @@
                             </a>
                             <ul class="dropdown-menu dropdown-bag transparent-bg">
                             {% if user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item dd-font">Product Management</a>
+                                    <a href="#" class="dropdown-item dd-font">Gallery Management</a>
+                                {% endif %}
                             <li><a class="dropdown-item dd-font" href="{% url 'profile' %}">Welcome, {{ request.user.username }}!</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>
