@@ -70,7 +70,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-bag transparent-bg">
                             {% if user.is_authenticated %}
-                            <li><a class="dropdown-item dd-font" href="#">Welcome, {{ request.user.username }}!</a></li>
+                            <li><a class="dropdown-item dd-font" href="{% url 'profile' %}">Welcome, {{ request.user.username }}!</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li>
                             <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>
                             {% else %}

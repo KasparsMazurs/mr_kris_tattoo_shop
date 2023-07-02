@@ -6,7 +6,7 @@
     <div class="toast-body">
         {{ message }} 
 
-        {% if grand_total %}
+        {% if grand_total and not on_profile_page %}
             <p class="font-color-b">In your Bag are {{ product_count }} itams!</p>
             <div>
                 {% for item in bag_items %}
