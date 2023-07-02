@@ -2,19 +2,19 @@
 {% load static %}
 
 {% block content %}
-    <div class="overlay"></div>
+<div class="container box transparent-bg border">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Edit a Product</h5>
-                <hr>
+            <div class="col">
+                <div class="line-w"></div>
+                <h2 class="font-color-w text-center">Product Management</h2>
+                <p class="font-color-w text-center">Edit Product<p>
+                <div class="line-w"></div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 font-color-w">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -24,7 +24,7 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
+                    <div>
                         <a class="btn btn-primary box-s" href="{% url 'shop' %}">Cancel</a>
                         <button class="btn btn-warning box-s" type="submit">Update Product</button>
                     </div>
