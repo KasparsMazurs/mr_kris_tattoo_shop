@@ -44,20 +44,20 @@
     });
 
     // Mailchimp
- (function($) {
-    window.fnames = new Array(); 
-    window.ftypes = new Array();
-    fnames[0]=EMAIL;
-    ftypes[0]=merge;
-    fnames[1]=FNAME;
-    ftypes[1]=merge;
-    fnames[2]=LNAME;
-    ftypes[2]=merge;
-    fnames[3]=ADDRESS;
-    ftypes[3]=merge;
-    fnames[4]=PHONE;
-    ftypes[4]=merge;
-    fnames[5]=BIRTHDAY;
-    ftypes[5]=merge;
-    false;
-}(jQuery));
+    (function($) {
+        window.fnames = new Array(); 
+        window.ftypes = new Array();
+        fnames[0]=EMAIL;
+        ftypes[0]=merge;
+        fnames[1]=FNAME;
+        ftypes[1]=merge;
+        fnames[2]=LNAME;
+        ftypes[2]=merge;
+        fnames[3]=ADDRESS;
+        ftypes[3]=merge;
+        fnames[4]=PHONE;
+        ftypes[4]=merge;
+        fnames[5]=BIRTHDAY;
+        ftypes[5]=merge;
+        false;
+    });

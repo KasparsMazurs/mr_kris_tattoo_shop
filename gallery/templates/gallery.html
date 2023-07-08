@@ -24,6 +24,10 @@
                         <img src="{{ gallery_image.image.url }}" alt="{{ gallery_image.description }}">
                     </a>
                 </div>
+                <!-- Fallback HTML link -->
+                <div>
+                    <a href="{{ gallery_image.image.url }}">{{ gallery_image.description }}</a>
+                </div>
             </div>
         {% endfor %}
     </div>
