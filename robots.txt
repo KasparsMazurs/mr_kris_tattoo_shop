@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://mr-kris-tattoo-shop.herokuapp.com/sitemap.xml	
