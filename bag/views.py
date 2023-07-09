@@ -5,13 +5,15 @@ from shop.models import Product
 
 # Create your views here.
 def bag(request):
-    """ A view to return the shoping bag page """
-
+    """ 
+    A view to return the shoping bag page
+    """
     return render(request, 'bag.html')
 
 def add_to_bag(request, item_id):
-    """ Add a specified product to the shopping bag """
-
+    """ 
+    Add a specified product to the shopping bag 
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -28,8 +30,9 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
-
+    """
+    Adjust the quantity of the specified product to the specified amount
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
@@ -45,8 +48,9 @@ def adjust_bag(request, item_id):
     return redirect(reverse('bag'))
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
-
+    """
+    Remove the item from the shopping bag
+    """
     product = get_object_or_404(Product, pk=item_id)
     bag = request.session.get('bag', {})  # Retrieve the bag from the session
     bag.pop(item_id)

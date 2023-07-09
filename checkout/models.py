@@ -10,6 +10,10 @@ from profiles.models import UserProfile
 # Create your models here.
 
 class Order(models.Model):
+    """
+    Model class representing an order.
+    This will create a new order object with the specified field values and save it to the database.
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
@@ -54,6 +58,10 @@ class Order(models.Model):
         return self.order_number
 
 class OrderLineItem(models.Model):
+    """
+    Model class representing a line item within an order.
+    This will create a new order line item object with the specified field values and save it to the database.
+    """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
@@ -68,4 +76,7 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
+        """
+        Returns a string representation of the order line item.
+        """
         return f'SKU {self.product.slug} on order {self.order.order_number}'

@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.db.models.functions import Lower
 from django.views.generic import ListView, DetailView
 from .models import Product
 from .forms import ProductForm
@@ -52,15 +51,13 @@ def add_product(request):
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
-        form = ProductForm()
-        
-    template = 'add_product.html'
-    context = {
-        'form': form,
-    }
+        form = ProductForm()     
+        template = 'add_product.html'
+        context = {
+            'form': form,
+        }
 
     return render(request, template, context)
-
 
 @login_required
 def edit_product(request, product_id):

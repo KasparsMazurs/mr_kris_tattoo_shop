@@ -3,7 +3,18 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    Form class for creating and updating orders.
+    Inherits from Django's ModelForm class and uses the Order model.
+    This will create an instance of the OrderForm with empty initial values.
+    """
     class Meta:
+        """
+        Initialize the OrderForm instance.
+
+        Add placeholders and classes to form fields, remove auto-generated
+        labels, and set autofocus on the first field.
+        """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

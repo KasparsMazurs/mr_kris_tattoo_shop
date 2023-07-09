@@ -1,22 +1,25 @@
+import json
+import stripe
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-
-from .forms import OrderForm
-from .models import Order, OrderLineItem
 
 from shop.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
-import stripe
-import json
-
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Cache checkout data in the session and modify the Stripe PaymentIntent metadata.
+    This function is called asynchronously when the payment form is submitted.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -33,6 +36,10 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    View function for the checkout page.
+    Handles the checkout process, including form submission and order creation.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 

@@ -1,5 +1,5 @@
-from django.db import models
 import datetime
+from django.db import models
 
 class Gallery(models.Model):
     """

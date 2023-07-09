@@ -3,7 +3,10 @@ from django.shortcuts import get_object_or_404
 from shop.models import Product
 
 def bag_contents(request):
-
+    """
+    Retrieves the contents of the shopping bag from the session and calculates various metrics.
+    The `contents` dictionary will contain the bag items, total price, product count, and grand total.
+    """
     bag_items = []
     total = 0
     product_count = 0
@@ -22,8 +25,7 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
 
-    grand_total = total
-    
+    grand_total = total 
     context = {
         'bag_items': bag_items,
         'total': total,
