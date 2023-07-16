@@ -276,6 +276,10 @@ This functionality will be exclusively available to the admin, allowing them to 
 
 Users will have the option to purchase a product and receive a digital copy of the item.
 
+#### Reviews
+
+Users will be able to leave product reviews.
+
 ## Design
 
 ### Wireframes
@@ -300,24 +304,179 @@ Regularly during development, Chrome Developer Tools was utilized to test the we
 ### Validator Testing
 
 Validator Testing
-HTML
+**HTML**
 
-Code passed official W3C Validator testing.
+Code passed [official W3C Validator testing.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmr-kris-tattoo-shop.herokuapp.com%2F)
 
-CSS
+**CSS**
 
-Css passed official W3C Validator testing.
+Code passed [official W3C Validator testing.](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmr-kris-tattoo-shop.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-Javascript
+**Javascript**
 
 The alert function was tested with jshint.com.
 
-Python
+**Python**
 
 The code was tested with PEPE8.
 
-Lighthouse
+**Lighthouse**
 
 Pages were tested with Chrome Developer Tools using the Lighthouse resource.
 
-![Mr. Kris Tattoo LH](https://lh3.googleusercontent.com/pw/AIL4fc-Ay7BgWLb3D2WJqE8SN3UmA1-KNoc0pTiPU9FboXewyb5jk5wskdw6HZ9BBk_2S3nDzbU-iMMnynR1m1hFS6BBCRbVq161_KFwU7EHtJI2jrRqJY5osCdtIQYrVYf6CvL2KVSBrsf7kHn2xjHhAF7pwA=w1920-h519-s-no?authuser=0)
+![Mr. Kris Tattoo LH](https://lh3.googleusercontent.com/pw/AIL4fc9xP1SdhcI5Hr7yWTegxlm-0b_CaDS2KHnPzTBoXUTVfjL3tPF1tXjU1ExpcjhU9VlMH5ZaO3lqvVsD1y9GKkG14usbtUar63e5EJuwJD4JxSnr77lcCVkm8fQHjytackxfMAxhWwwSmG78RrFOWF1DRw=w1420-h739-s-no?authuser=0)
+
+**Robots.txt test for SEO**
+
+Seositecheckup.com
+
+![Mr. Kris Tattoo SEO](https://lh3.googleusercontent.com/pw/AIL4fc_9gFCj2SJS6VP4-kHvnaZS0uPRb6zIP2yi-kq0hYJTMSN6ixze5nWdMudkEtk8MGaBnC326lm0N63FDJGgJ-H0CGO4QNvztg8dw37n3xpGkgE4Newd3_v6BcXKUb66tpoCDV8OP7nRkXmXI7vxYfwJlA=w1495-h835-s-no?authuser=0)
+
+### Functional Testing
+
+**Functional Test: Viewing Tattoo Artist's Image**
+
+User Story: As a user, I want to see the tattoo artist's image so that I can recognize them and get a sense of their personality.
+
+Test Steps:
+
+1. Navigate to the tattoo artist's profile page.
+2. Verify that the tattoo artist's image is prominently displayed on the page.
+3. Ensure that the image is clear and visually represents the tattoo artist's appearance.
+4. Verify that the image accurately represents the tattoo artist's personality, as described or expected.
+
+**Functional Test: Viewing Tattoo Artist's About Me Section**
+
+User Story: As a user, I want to see the tattoo artist's about me section so that I can learn more about their background, experience, and skills.
+
+Test Steps:
+
+1. Navigate to the tattoo artist's profile page.
+2. Locate the about me section.
+3. Verify that the about me section contains relevant information about the tattoo artist's background, such as their education, training, and any relevant certifications.
+
+**Functional Test: Viewing Tattoo Artist's Portfolio**
+
+User Story: As a user, I want to see the tattoo artist's portfolio so that I can view their previous work and get inspired by their designs.
+
+Test Steps:
+
+1. Navigate to the tattoo artist's gallery page.
+2. Verify that the portfolio showcases a collection of the tattoo artist's previous work.
+3. Ensure that the portfolio includes a variety of tattoo designs, styles, and sizes to demonstrate the artist's versatility.
+4. Click on individual portfolio items to view them in detail.
+5. Ensure that when a user is clicked on an image it is easy to move to next image by click of the button
+6. Verify that each portfolio item displays high-quality images of the tattoo design, capturing the intricacy and detail of the work.
+7. Ensure that filter for individual body parts are working
+
+**Functional Test: Viewing Tattoo Artist's Contact Details and Social Media Links**
+
+User Story: As a user, I want to see the tattoo artist's contact details and social media links so that I can reach out to them and follow them online.
+
+Test Steps:
+
+1. Locate the contact details section.
+2. Verify that the contact details include relevant information such as the tattoo artist's phone number, email address, or a contact form.
+3. Verify that the social media links are displayed and easily accessible, providing links to the tattoo artist's profiles on platforms like Instagram, Facebook, or Twitter.
+4. Click on the contact details and social media links to ensure they are functioning properly and directing the user to the appropriate channels.
+
+**Functional Test: Viewing a List of Products**
+
+User Story: As a customer, I want to see a list of products with their names, prices, and images so that I can compare and choose the best ones for me.
+
+Test Steps:
+
+1. Verify that a list of products is displayed.
+2. Ensure that each product entry includes the product name, price, and an image.
+3. Check that the product names accurately represent the items.
+4. Verify that the prices are correctly displayed and formatted.
+5. Ensure that the product images are clear and visually represent the corresponding items.
+6. Ensure that filters are working.
+
+**Functional Test: Viewing Product Details**
+
+User Story: As a customer, I want to view the details of a product so that I can learn more about its features, specifications.
+
+Test Steps:
+
+1. Click on a specific product to view its details.
+2. Verify that the product details page displays information such as the product description.
+3. Ensure that user can change quantity of product for purchase
+4. Ensure that the user can add product in cart, and by doing that customer are informed that item is added in to the cart
+5. Ensure that Admin can edit / delete product
+6. Ensure that Admin is provided with additional section for adding products
+
+**Functional Test: Managing the Shopping Cart**
+
+User Story: As a customer, I want to manage my shopping cart so that I can review and update my order before checkout.
+
+Test Steps:
+
+1. Add one or more products to the shopping cart.
+2. Navigate to the shopping cart page.
+3. Verify that the shopping cart displays the added products, including their names, quantities, prices, and total cost.
+4. Ensure that the cart provides options to update the quantity of each product or remove items from the cart.
+5. Verify that updating the quantity or removing items from the cart reflects the changes accurately.
+6. Verify that the total cost is updated correctly based on the changes made to the cart.
+
+**Functional Test: Secure and Convenient Payment**
+
+User Story: As a customer, I want to pay for my order securely and conveniently so that I can complete my purchase and receive my products.
+
+Test Steps:
+
+1. Proceed to the checkout page from the shopping cart.
+2. Verify that the checkout page provides a secure payment option, such as credit card.
+3. Submit the payment information.
+
+### Browser Testing
+
+Pages behave as expected in all browsers tested. The website was tested in Chrome, Firefox, Brave Browser, Edge and Opera.
+
+### Bugs
+
+There are no known bugs
+
+## Deployment
+
+Acting on the instructor's advice of "deploying early to avoid problems down the line," we chose to deploy our website to Heroku right after the initial setup. This helped us identify and address any issues early on, resulting in a smoother development process. Additionally, it allowed us to test the website's performance and make improvements before the final release.
+
+### Heroku
+
+The website was deployed to Heroku using several steps.
+
+* First, a Heroku account was created and a new app was created with an app name and region.
+* Heroku Postgres was added as a resource and configured with a hobby dev plan.
+* Config vars were added in the settings tab, including SECRET_KEY, DATABASE_URL etc.,
+* The deploy tab was selected, and Deployment method was set to GitHub.
+* The main branch was chosen for manual deployment, and the app was deployed.
+* Automatic Deploy can also be enabled for ease of use. If the build fails, the resources tab can be accessed to view the build log and find out why it failed and how to fix it.
+
+### Version Control
+
+Throughout the development process, version control was managed using Github. The team utilized the platform to collaborate and manage changes to the codebase. Each feature and bug fix was implemented on a separate branch, and changes were reviewed and merged into the main branch via pull requests.
+
+## Technologies used
+
+* HTML5 for the contents and structure of the website.
+* CSS3 for the styling and animations.
+* Amazon s3 for static files and media.
+* Adobe XD for wireframing.
+* GitHub as a remote repository.
+* VS Code was used as IDE and git version control.
+* Heroku to deploy the website/app.
+* Chrome, Firefox, Brave Browser, Edge and Opera for browser testing the responsiveness.
+* Chrome Developer Tools for testing screen sizes and using Lighthouse.
+* Favicon.io to create a favicon.
+* Image converter for optimizing images
+* Bootstrap 4 for responsive design
+* emailjs API for emails
+* Stripe for payment handle
+* Lightbox for Gallery image views
+
+### Frameworks
+* Django
+
+## Credits
+* Inspiration for shop was taken from Boutique project
+* Stackoverflow for providing solutions for problems in code
