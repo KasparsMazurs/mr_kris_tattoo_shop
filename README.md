@@ -11,10 +11,60 @@ View the live project [here](https://mr-kris-tattoo-shop.herokuapp.com/)
 ## User Experience
 ### Goals
 The primary objective of Mr. Kris's homepage is to empower him as a self-made tattoo artist, providing him with a dedicated platform to showcase his unique artistic style, expand his business, and offer his printed artworks for sale.
+
+### E-commerce Business Model for Mr. Kris Tattoo:
+
+1. Business Overview:
+
+Mr. Kris Tattoo is an e-commerce platform that offers a unique range of tattoo artworks and artwork designs created by the talented tattoo artist, Mr. Kris. The platform aims to provide customers with a seamless and engaging shopping experience to purchase high-quality art, and other merchandise related to Mr. Kris's artwork.
+
+2. Value Proposition:
+
+* Unique and Original Artworks: Customers can access exclusive and one-of-a-kind tattoo designs and artworks created by Mr. Kris.
+* Engaging Content: The platform will offer engaging content, including before-and-after tattoo transformations, artist insights, and featured artwork, to create a strong connection with the audience.
+* Interactive Social Media Presence: Mr. Kris Tattoo actively engages with followers on various social media platforms, allowing customers to be part of the creative process.
+* Personalization: Customers will have the option to customize certain tattoo designs or artwork to suit their preferences.
+
+3. Revenue Model:
+
+* **Product Sales:** The primary source of revenue will come from the sales of art prints, posters, and related merchandise on the e-commerce platform.
+* **Commission on Customization:** Customers who choose to customize a tattoo design or artwork may be charged an additional fee, generating extra revenue.
+* **Collaborations and Sponsorships:** Mr. Kris Tattoo may collaborate with other artists or brands and receive revenue through joint promotions or sponsored content.
+
+4. Marketing and Sales Strategy:
+
+* **Social Media Marketing:** Utilize Facebook, Instagram, and TikTok to reach a wider audience and promote engaging content. Drive traffic from social media platforms to the e-commerce website.
+
+* **Leveraging Existing Social Media Following:** Leverage the existing following on Mr. Kris's social media accounts dedicated to his tattoo artistry to promote the e-commerce application and the homepage.
+
+* **Email Campaigns:** Develop a weekly newsletter for subscribers, curating engaging content, exclusive discounts, and featured artwork. Direct recipients to the e-commerce application.
+
+* **SEO and Content Marketing:** Optimize the homepage for search engines to improve visibility and attract organic traffic. Publish relevant content related to tattoo artistry to establish authority in the niche.
+
+5. Customer Relationship Management:
+
+* **Personalized Customer Support:** Provide prompt and personalized support to customers through various channels, including email, and social media.
+* **Loyalty Programs:** Implement loyalty programs to reward repeat customers and encourage brand loyalty.
+* **Feedback and Reviews:** Encourage customers to leave reviews and provide feedback to improve products and services continually.
+
+6. Operations and Fulfillment:
+
+* **Order Fulfillment:** Partner with reliable shipping and logistics providers to ensure timely and safe delivery of orders.
+
+7. Technology Infrastructure:
+
+* **E-commerce Platform:** Utilize a robust and secure e-commerce platform to handle online transactions and manage product listings.
+* **Analytics Tools:** Employ various analytics tools, such as Google Analytics and Facebook Pixel, to track performance, customer behavior, and marketing campaign success.
+
+8. Financial Projections:
+
+* The business model will include financial projections, including sales forecasts, marketing expenses, operational costs, and expected revenue.
+
 ### Marketing plan
 
 1. Social Media Marketing:
-* **Facebook**: Utilize Facebook's advertising platform to create targeted campaigns that reach a wider audience. Promote engaging content, such as before-and-after tattoo transformations, artist insights, and featured artwork. Encourage followers to visit the homepage and explore the e-commerce application.
+* **Facebook**: Utilize Facebook's advertising platform to create targeted campaigns that reach a wider audience. Promote engaging content, such as before-and-after tattoo transformations, artist insights, and featured artwork. Encourage followers to visit the homepage and explore the e-commerce application. Currently, we are facing an issue with renaming the Facebook page from 'Method of Creativity' to 'Mr. Kriss Tattoo.' We are in contact with the Facebook support team to resolve this matter, and once the issue is resolved, the web page name will match the Facebook page name as intended.
+
 * **Instagram**: Leverage Instagram's visual nature by regularly sharing high-quality images of Mr. Kris's tattoo works and printed artworks. Utilize relevant hashtags and engage with followers through comments, direct messages, and live sessions. Direct followers to the homepage to learn more about Mr. Kris's services and make purchases.
 * **TikTok**: Create short, attention-grabbing videos showcasing Mr. Kris's tattooing process, unique designs, and the artwork available on the homepage. Utilize trending hashtags and collaborate with popular TikTok creators to reach a wider audience. Encourage viewers to visit the homepage for more information and purchases.
 
