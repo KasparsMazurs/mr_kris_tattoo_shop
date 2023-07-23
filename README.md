@@ -510,6 +510,8 @@ Throughout the development process, version control was managed using Github. Th
 
 * HTML5 for the contents and structure of the website.
 * CSS3 for the styling and animations.
+* JavaScript for funktionality
+* Python for handling backend
 * Amazon s3 for static files and media.
 * Adobe XD for wireframing.
 * GitHub as a remote repository.
@@ -523,6 +525,7 @@ Throughout the development process, version control was managed using Github. Th
 * emailjs API for emails
 * Stripe for payment handle
 * Lightbox for Gallery image views
+* ElephantSQL for Database
 
 ### Frameworks
 * Django
