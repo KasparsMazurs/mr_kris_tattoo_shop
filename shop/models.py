@@ -6,7 +6,9 @@ class Comment(models.Model):
     """
     Create a model for comments
     """
-    post = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='product_comments')
+    post = models.ForeignKey('Product',
+                             on_delete=models.CASCADE, 
+                             related_name='product_comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -27,7 +29,9 @@ class Product(models.Model):
         ('Colourful drawing', 'Colourful drawing'),
         ('Painting', 'Painting'),
     ]
-    product_type = models.CharField(max_length=40, choices=types, default='Black and white drawing')
+    product_type = models.CharField(max_length=40,
+                                    choices=types, 
+                                    default='Black and white drawing')
 
     def __str__(self):
         return self.name

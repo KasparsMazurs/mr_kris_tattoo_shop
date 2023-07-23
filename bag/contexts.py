@@ -4,8 +4,10 @@ from shop.models import Product
 
 def bag_contents(request):
     """
-    Retrieves the contents of the shopping bag from the session and calculates various metrics.
-    The `contents` dictionary will contain the bag items, total price, product count, and grand total.
+    Retrieves the contents of the shopping bag 
+    from the session and calculates various metrics.
+    The `contents` dictionary will contain the bag items, 
+    total price, product count, and grand total.
     """
     bag_items = []
     total = 0

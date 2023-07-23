@@ -14,6 +14,8 @@ class ProductAdmin(SummernoteModelAdmin):
     summernote_fields = ('description',)
     fieldsets = (
         (None, {
-            'fields': ('image', 'name','slug', 'description', 'product_price', 'digital_product_price', 'product_type', )
+            'fields': ('image', 'name','slug', 
+                       'description', 'product_price', 
+                       'digital_product_price', 'product_type', )
         }),
     )
