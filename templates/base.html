@@ -64,32 +64,32 @@
                         </li>
                     </ul>
                 </div>
-                <div >
-                    <ul class="navbar-nav line">
-                        <!--    <li class="nav-item line right"> -->
-                         <!--       <a class="nav-link font line" href="{% url 'bag' %}"><strong>Eur: {{ grand_total|floatformat:2 }}</strong></a> -->
-                        <!--    </li> -->
-                        <li class="nav-item dropdown line right-f">
-                            <a class="nav-link dropdown-toggle bag-font" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-bag transparent-bg">
-                            {% if user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item dd-font">Product Management</a>
-                                    <a href="#" class="dropdown-item dd-font">Gallery Management</a>
-                                {% endif %}
-                            <li><a class="dropdown-item dd-font" href="{% url 'profile' %}">Welcome, {{ request.user.username }}!</a></li>
-                           <!-- <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li> -->
-                            <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>
-                            {% else %}
-                            <li><a class="dropdown-item dd-font" href="{% url 'account_login' %}">Log In</a></li>
-                           <!-- <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li> -->
-                            {% endif %}
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+            <!--     <div >-->
+            <!--         <ul class="navbar-nav line">-->
+            <!--    <li class="nav-item line right"> -->
+            <!--       <a class="nav-link font line" href="{% url 'bag' %}"><strong>Eur: {{ grand_total|floatformat:2 }}</strong></a> -->
+            <!--    </li> -->
+            <!--        <li class="nav-item dropdown line right-f">-->
+            <!--        <a class="nav-link dropdown-toggle bag-font" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+            <!--                     <i class="fa-solid fa-bag-shopping"></i>-->
+            <!--                 </a>-->
+            <!--                 <ul class="dropdown-menu dropdown-bag transparent-bg">-->
+             <!--                {% if user.is_authenticated %}-->
+             <!--                    {% if request.user.is_superuser %}-->
+             <!--                        <a href="{% url 'add_product' %}" class="dropdown-item dd-font">Product Management</a>-->
+             <!--                        <a href="#" class="dropdown-item dd-font">Gallery Management</a>-->
+             <!--                    {% endif %}-->
+             <!--                <li><a class="dropdown-item dd-font" href="{% url 'profile' %}">Welcome, {{ request.user.username }}!</a></li>-->
+             <!--               <!-- <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li> -->
+             <!--                <li><a class="dropdown-item dd-font" href="{% url 'account_logout' %}">Log out</a></li>-->
+             <!--                {% else %}-->
+             <!--                <li><a class="dropdown-item dd-font" href="{% url 'account_login' %}">Log In</a></li>-->
+             <!--               <!-- <li><a class="dropdown-item dd-font" href="{% url 'bag' %}">Your shopping cart</a></li> -->
+             <!--                {% endif %}-->
+              <!--               </ul>-->
+              <!--           </li>-->
+              <!--       </ul>-->-->
+              <!--   </div>-->
               </div>
             </div>
           </nav>
