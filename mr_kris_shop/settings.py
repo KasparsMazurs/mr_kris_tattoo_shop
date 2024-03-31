@@ -33,7 +33,6 @@ X_FRAME_OPTIONS = 'ALLOWALL'
 
 ALLOWED_HOSTS = ["mr-kris-tattoo-shop.herokuapp.com", "localhost",
                  "127.0.0.1:8000", "127.0.0.1", "mrkristattoo.com", ".mrkristattoo.com", "www.mrkristattoo.com", ".herokuapp.com", ".researchthroughdesign.org"]
-                 "127.0.0.1:8000", "127.0.0.1", "https://mrkristattoo.com/"]
 
 
 # Application definition
