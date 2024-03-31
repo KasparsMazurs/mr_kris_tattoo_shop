@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Order
 
 @login_required
 def profile(request):
@@ -31,7 +32,6 @@ def profile(request):
 
     return render(request, template, context)
 
-
 def order_history(request, order_number):
     """
     View for displaying the order history.
@@ -40,6 +40,7 @@ def order_history(request, order_number):
     displays a confirmation message, and renders the 'checkout_success.html'
     template with the order details
     """
+    order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
@@ -48,6 +49,7 @@ def order_history(request, order_number):
 
     template = 'checkout_success.html'
     context = {
+        'order': order,
         'from_profile': True,
     }
 
